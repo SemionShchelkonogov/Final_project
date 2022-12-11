@@ -21,3 +21,26 @@ for (int i = 0; i < TextArray.Length; i++)
 }
 return count;
 }
+
+string [] CreateArrayOfShortString (string[] TextArray, int count)
+{
+int newcount = 0;
+string[] ArrayofShortString = new string [count];
+for (int i = 0; i < TextArray.Length; i++)
+{
+    if(TextArray[i].Length<=3)
+    {
+        ArrayofShortString[newcount] = TextArray[i];
+        newcount++;
+    }
+}
+return ArrayofShortString;
+}
+
+void PrintArray(string[] TextArray)
+{
+foreach (var item in TextArray)
+{
+    Console.Write(item + " ");
+}
+}
