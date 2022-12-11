@@ -8,3 +8,16 @@ for (int i = 0; i < array.Length; i++)
 }
 return array;
 }
+
+int GetNewArrayLength(string[] TextArray)
+{
+int count = 0;
+for (int i = 0; i < TextArray.Length; i++)
+{
+    if(TextArray[i].Length<=3)
+    {
+        count++;
+    }
+}
+return count;
+}
