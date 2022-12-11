@@ -44,3 +44,15 @@ foreach (var item in TextArray)
     Console.Write(item + " ");
 }
 }
+
+Console.Write("Введите количество элементов:\t ");
+int arrayLenght = int.Parse(Console.ReadLine()??"0");
+string[] ArrayofString = GetTextFromUser(arrayLenght);
+int newArrayLength = GetNewArrayLength(ArrayofString);
+string [] newArray = CreateArrayOfShortString(TextArray: ArrayofString,count: newArrayLength);
+
+Console.Write("Получился вот такой массив строк: ");
+PrintArray(ArrayofString);
+Console.WriteLine();
+Console.WriteLine("Массив строк с количеством элементов <=3: ");
+PrintArray(newArray);
